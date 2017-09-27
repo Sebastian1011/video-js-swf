@@ -438,7 +438,7 @@ package com.videojs.providers{
             _ns = new NetStream(_nc);
             _ns.addEventListener(NetStatusEvent.NET_STATUS, onNetStreamStatus);
             _ns.client = this;
-            _ns.bufferTime = 1;
+            _ns.bufferTime = 0; // change bufferTime to 0
             _ns.play(_src.streamURL);
             _videoReference.attachNetStream(_ns);
             _model.broadcastEventExternally(ExternalEventName.ON_LOAD_START);
